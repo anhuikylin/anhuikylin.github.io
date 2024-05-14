@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://pic.imgdb.cn/item/664201bc0ea9cb14031a5aad.png');
+    # background-image: url('https://pic.imgdb.cn/item/664201bc0ea9cb14031a5aad.png');
     background-size: cover; /* 调整背景图片大小以覆盖整个页面 */
     background-position: center; /* 将背景图片居中对齐 */
     background-repeat: no-repeat; /* 防止背景图片重复 */
