@@ -16,4 +16,18 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById(tabId).classList.add('active');
         });
     });
+
+    // 添加点击事件监听器以显示弹射文字
+    document.body.addEventListener('click', function (e) {
+        const flyingText = document.createElement('div');
+        flyingText.className = 'flying-text';
+        flyingText.textContent = 'Hello!';
+        flyingText.style.left = `${e.pageX}px`;
+        flyingText.style.top = `${e.pageY}px`;
+        document.body.appendChild(flyingText);
+
+        flyingText.addEventListener('animationend', function () {
+            flyingText.remove();
+        });
+    });
 });
