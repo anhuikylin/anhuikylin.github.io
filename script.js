@@ -17,11 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // 消息数组
+    const messages = ['Hello!', 'Welcome!', 'Nice to see you!', 'Have a great day!', 'Enjoy!', 'Good luck!', 'Keep it up!'];
+
     // 添加点击事件监听器以显示弹射文字
     document.body.addEventListener('click', function (e) {
+        // 随机选择一条消息
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
         const flyingText = document.createElement('div');
         flyingText.className = 'flying-text';
-        flyingText.textContent = 'Hello!';
+        flyingText.textContent = randomMessage;
         flyingText.style.left = `${e.pageX}px`;
         flyingText.style.top = `${e.pageY}px`;
         document.body.appendChild(flyingText);
